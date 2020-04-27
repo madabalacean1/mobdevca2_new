@@ -1,0 +1,14 @@
+<!--Code from class recording 23/4-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Deaths</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
+        {{ death.name }}
+        </ion-item>
+    </ion-list>
+</ion-content>
